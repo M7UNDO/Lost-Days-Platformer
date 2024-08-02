@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Enemy_jumping_animOverrides
+  m_Controller: {fileID: 9100000, guid: 6e0516a59417fb745b16789ab93a7e69, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: baf28ffdc081f7948a3baf5a5ab9c80a, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: b518f15899e34384a9c55851b89b982d, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: fc5fd4f2e2e600e4f882116e09843034, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 7aa4178c5e342934d91fa49304a21fd1, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: fcfec8ea228246946974f6f329086fd0, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 59fa143cdb534054abeb2d70ff244f8d, type: 2}
