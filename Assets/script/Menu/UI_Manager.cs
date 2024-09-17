@@ -21,6 +21,7 @@ private void OnTriggerEnter2D(Collider2D col)
         CanvasRestart.SetActive(true);
     }
     
+    
 
 
 

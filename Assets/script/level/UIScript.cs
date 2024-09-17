@@ -15,6 +15,7 @@ public class UIScript : MonoBehaviour
     public void RestartGame()
     {
         _lvlMngr.ReloadScene(_lvlMngr.currentScene);
+        Time.timeScale = 1;
     }
 
     public void ExitGame()
