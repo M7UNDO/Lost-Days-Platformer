@@ -44,6 +44,8 @@ public class PlayerMovement : MonoBehaviour
     public float wallJumpWaitTime = 0.5f;
     public float wallJumpForce = 2.5f;
     public LayerMask wallJumpMask;
+    public ParticleSystem _particleSystem;
+
     [Header("GLIDING:")]
     public bool glideOn;
     public float glideMod = 0.05f;
@@ -136,6 +138,7 @@ public class PlayerMovement : MonoBehaviour
         {
             
             Jump();
+            Particle();
             
         }
 
@@ -182,6 +185,7 @@ public class PlayerMovement : MonoBehaviour
         // If the player is pressing the left or right button, call the flip function.
         if (Mathf.Abs(Input.GetAxisRaw("Horizontal")) > 0.0f)
             Flip();
+        //Particle();
         // Calculate direction based on player input.
         _direction = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
         _direction = _direction.normalized;
@@ -268,6 +272,11 @@ public class PlayerMovement : MonoBehaviour
         }
        
     }
+
+    private void Particle()
+    {
+        _particleSystem.Play();
+    }
     void Flip()
     {
         if (playerGFX != null)
@@ -279,6 +288,7 @@ public class PlayerMovement : MonoBehaviour
                 playerGFX.transform.localScale = new Vector3(-playerGFX.transform.localScale.x, //x
                                                             playerGFX.transform.localScale.y,   //y
                                                             playerGFX.transform.localScale.z);  //z
+                Particle();
             }
         }
         else
